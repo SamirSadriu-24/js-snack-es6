@@ -32,14 +32,23 @@ const bici = [
 ];
 
 console.log(bici);
-let lightestNike = [];
+let lightestBike = bici[0];
 
-for( i = 0; i < bici.length; i++){
+for( i = 1; i < bici.length; i++){
     const biciArray = bici[i];
     console.log(biciArray.peso);
-
-    // for(j = 0; j < biciArray.length; j++ ){
-    //     console.log(biciArray[j]);
-    //     console.log(biciArray[j].peso);
-    // }
+    //così facendo stampa il peso di tutte le bici tranne la prima che voglio usare per fare i paragoni.
+    if(biciArray.peso < lightestBike.peso){
+        lightestBike = biciArray;
+    }
 }
+
+
+const result_container = document.getElementById("result_container");
+const result = ("La tua bici più veloce è: " + lightestBike.nome + " e pesa "+ lightestBike.peso);
+
+let resultOnscreen = document.createElement("div");
+resultOnscreen.setAttribute("id", "Risultato");
+resultOnscreen.textContent = result;
+result_container.appendChild(resultOnscreen);
+
