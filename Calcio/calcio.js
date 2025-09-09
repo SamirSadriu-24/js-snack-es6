@@ -64,4 +64,8 @@ for (let i = 0; i < Squadre.length; i++) {
 
 //stampo in console
 console.log(fallieNomi);
+for (let j= 0; j < fallieNomi.length; j++){
+    console.log(fallieNomi[j]);
+}
+
 
