@@ -6,37 +6,38 @@
 const bici = [
     {
         nome: "Mountain Bike",
-        peso: 15 + "kg"
+        peso: 15
     },
     {
         nome: "Normal Bike",
-        peso: 12 + "kg"
+        peso: 12
     },
     {
         nome: "Mountain Bike v.2",
-        peso: 18 + "kg"
+        peso: 18
     },
     {
         nome: "Race Bike",
-        peso: 10 + "kg"
+        peso: 10
     },
     {
         nome: "Fast Bike",
-        peso: 7 + "kg"
+        peso: 7
     },
     {
         nome: "Beach Bike",
-        peso: 19 + "kg"
+        peso: 19
     },
 
 ];
 
 console.log(bici);
+let lightestNike = [];
 
 for( i = 0; i < bici.length; i++){
     const biciArray = bici[i];
     console.log(biciArray.peso);
-    
+
     // for(j = 0; j < biciArray.length; j++ ){
     //     console.log(biciArray[j]);
     //     console.log(biciArray[j].peso);
