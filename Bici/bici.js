@@ -30,13 +30,16 @@ const bici = [
     },
 
 ];
-
-console.log(bici);
 let lightestBike = bici[0];
 
 for( i = 1; i < bici.length; i++){
     const biciArray = bici[i];
-    console.log(biciArray.peso);
+    //***BONUS 
+    const bike_list = document.getElementById("bike_list");
+    let bikeOnScreen = document.createElement("p");
+    bikeOnScreen.textContent = bici[i].nome + " ";
+    bike_list.appendChild(bikeOnScreen);
+
     //così facendo stampa il peso di tutte le bici tranne la prima che voglio usare per fare i paragoni.
     if(biciArray.peso < lightestBike.peso){
         lightestBike = biciArray;
@@ -45,10 +48,11 @@ for( i = 1; i < bici.length; i++){
 
 
 const result_container = document.getElementById("result_container");
-const result = ("La tua bici più veloce è: " + lightestBike.nome + " e pesa "+ lightestBike.peso);
+const result = ("La tua bici più veloce è: " + lightestBike.nome + " e pesa "+ lightestBike.peso + " kg!");
 
 let resultOnscreen = document.createElement("div");
 resultOnscreen.setAttribute("id", "Risultato");
 resultOnscreen.textContent = result;
 result_container.appendChild(resultOnscreen);
+
 
