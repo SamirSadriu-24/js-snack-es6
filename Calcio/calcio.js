@@ -51,7 +51,7 @@ const Squadre = [
 console.log(Squadre);
 
 //creo il nuovo array fuori così posso richiarmarlo dopo
-let fallieNomi= [];
+let fallieNomi = [];
 
 //faccio un ciclo che generi punti e falli casuali e pushio i nomi e i falli nell'array sopra;
 
@@ -59,12 +59,15 @@ for (let i = 0; i < Squadre.length; i++) {
 
     Squadre[i].punti = Math.floor(Math.random() * 20);
     Squadre[i].falli = Math.floor(Math.random() * 11);
-    fallieNomi.push(Squadre[i].nome + " " + "Falli Subiti " + Squadre[i].falli);  
+    fallieNomi.push({
+        nome: Squadre[i].nome,
+        falli: Squadre[i].falli
+    });
 }
 
 //stampo in console
 console.log(fallieNomi);
-for (let j= 0; j < fallieNomi.length; j++){
+for (let j = 0; j < fallieNomi.length; j++) {
     console.log(fallieNomi[j]);
 }
 
