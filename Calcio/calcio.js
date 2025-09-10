@@ -48,7 +48,7 @@ const Squadre = [
 ];
 
 //stampa per controllo
-console.log(Squadre);
+// console.log(Squadre);
 
 //creo il nuovo array fuori così posso richiarmarlo dopo
 let fallieNomi = [];
@@ -66,7 +66,7 @@ for (let i = 0; i < Squadre.length; i++) {
 }
 
 //stampo in console
-console.log(fallieNomi);
+// console.log(fallieNomi);
 for (let j = 0; j < fallieNomi.length; j++) {
     console.log(fallieNomi[j]);
 }
